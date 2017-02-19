@@ -25,9 +25,9 @@ descendente(X, Y) :- filho(X, A), descendente(A, Y).
 descendente(D, A, 1)  :- filho(D, A).
 descendente(D, A, G1) :- filho(D, X), descendente(X, A, G), G1 is G + 1.
 
-bisavo(A, N) :- descendente(A, N, 2).
-trisavo(A, N) :- descendente(A, N, 3).
-tetravo(A, N) :- descendente(A, N, 4).
+bisavo(A, N) :- descendente(A, N, 3).
+trisavo(A, N) :- descendente(A, N, 4).
+tetravo(A, N) :- descendente(A, N, 5).
 
 
 ficha01(xx)       :- filho(joao, jose).
@@ -43,7 +43,7 @@ ficha01(xxix)     :- descendente(joao, manuel).
 ficha01(xxx)      :- filho(X, jose), descendente(X, manuel).
 ficha01(xxxi)     :- descendente(manuel, X), filho(X, jose).
 ficha01(xxxii, G) :- descendente(joao, jose, G).
-ficha01(xxxiii)   :- descendente(joao, jose).
+ficha01(xxxiii)   :- descendente(joao, jose, G), G = 2.
 ficha01(xxxiv, G) :- descendente(joao, manuel, G).
 ficha01(xxxv)     :- descendente(joao, manuel, G), G > 2 .
   
