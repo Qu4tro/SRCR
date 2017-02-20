@@ -34,7 +34,7 @@ ficha01(xx)       :- filho(joao, jose).
 ficha01(xxi)      :- pai(jose, joao).
 ficha01(xxii)     :- homem(joao).
 ficha01(xxiii)    :- mulher(jose).
-ficha01(xxiv)     :- filho(jose, _).
+ficha01(xxiv)     :- filho(_, jose).
 ficha01(xxv)      :- filho(jose, joao).
 ficha01(xxvi)     :- avo(manuel, jose).
 ficha01(xxvii)    :- avo(manuel, joao).
