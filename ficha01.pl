@@ -43,7 +43,7 @@ ficha01(xxix)     :- descendente(joao, manuel).
 ficha01(xxx)      :- filho(X, jose), descendente(X, manuel).
 ficha01(xxxi)     :- descendente(manuel, X), filho(X, jose).
 ficha01(xxxii, G) :- descendente(joao, jose, G).
-ficha01(xxxiii)   :- descendente(joao, jose, G), G = 2.
+ficha01(xxxiii)   :- descendente(joao, jose, G), G = 1.
 ficha01(xxxiv, G) :- descendente(joao, manuel, G).
 ficha01(xxxv)     :- descendente(joao, manuel, G), G > 2 .
   
